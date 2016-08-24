@@ -36,3 +36,13 @@ To concatenate JavaScript do not use the operator`.` but a simple addition.
 43 > 7 // true 
 "2" * 2 // 4 (Not possible to multiply a chain, "1" is implicitly converted to a number)
 ```
+## Conditions 
+```javascript
+if (<condition>) {
+
+} else if (<condition>) { // else if is written in 2 words
+
+} else {
+
+}
+```
