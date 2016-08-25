@@ -46,3 +46,29 @@ if (<condition>) {
 
 }
 ```
+## Loops
+JavaScript supports different kinds of loops:
+- for - loops through a block of code a number of times.
+- for/in - loops through the properties of an object.
+- while - loops through a block of code while a specified condition is true.
+- do/while - also loops through a block of code while a specified condition is true.
+
+loops are spelled the same way as PHP.
+```javascript
+while (<condition>) {
+
+}
+
+for (var i = 0; i < 10; i++) {
+
+}
+
+var person = {fname:"John", lname:"Doe", age:25}; 
+
+var text = "";
+var c;
+for (c in person) {
+    text += person[c];
+}
+```
+In JavaScript there is no foreach loops .
