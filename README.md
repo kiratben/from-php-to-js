@@ -72,3 +72,48 @@ for (c in person) {
 }
 ```
 In JavaScript there is no foreach loops .
+## Functions
+The functions can be written as in PHP and are a particular type variable. This will store them in a variable.
+```javascript
+function func1 (a) {
+    return a * 3   
+}
+
+var func2 = function (a) {
+    return a * 3   
+}
+
+func(3) // 9
+```
+
+The différence entre thesis two ways to declare a function is Explained in the chapter about the hoisting
+
+However there are some differences with PHP
+
+- A function has access to the external environment (external variables to the function in PHP to be used `use()` to get a similar result).
+- A function can be called with an incorrect number of parameters, the missing parameters will `undefined`.
+- It is not possible to assign a default value to parameters.
+- The functions are often used in callback (yet little exploited in PHP)
+```javascript
+ 
+var b = "1"
+function func (a) {
+    return b    
+}
+func() // "1"
+b = 3
+func() // 3
+
+// 2. We can call a function without parameters
+function func (a) {
+    return a    
+}
+func() // undefined
+
+// 3. If we want to give a default value to the parameter
+function func (a) {
+    if (a === undefined) {
+        a = 0
+    }
+}
+```
