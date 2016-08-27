@@ -72,6 +72,13 @@ for (c in person) {
 }
 ```
 In JavaScript there is no foreach loops .
+
+```javascript
+// JavaScript alternative to “for each” loop
+["Lisa", "Homer", "Bart"].forEach(function (p) {
+    "Hello " + p 
+})
+```
 ## Functions
 The functions can be written as in PHP and are a particular type variable. This will store them in a variable.
 ```javascript
@@ -86,7 +93,7 @@ var func2 = function (a) {
 func(3) // 9
 ```
 
-The différence entre thesis two ways to declare a function is Explained in the chapter about the hoisting
+The difference between thesis two ways to declare a function is Explained in the chapter about the hoisting
 
 However there are some differences with PHP
 
@@ -117,3 +124,25 @@ function func (a) {
     }
 }
 ```
+### * Everything in JavaScript acts like an object, with the only two exceptions being null and undefined.
+```javascript
+false.toString(); // 'false'
+
+[1, 2, 3].toString(); // '1,2,3'
+["Hello", "Lisa", "World"].length // 3
+
+"Hello".toUpperCase() // "HELLO"
+"abc".length // 3
+
+1.123124.toFixed(2) // "1.12"
+
+"1,2,3".split(',') // ['1', '2', '3']
+
+String.fromCharCode(65) // "A"
+
+// JavaScript alternative to “for each” loop
+["Lisa", "Homer", "Bart"].forEach(function (p) {
+    "Hello " + p 
+})
+```
+This chapter documents all of JavaScript's standard, built-in objects, including their methods and properties [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects).
