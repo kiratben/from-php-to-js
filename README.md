@@ -146,3 +146,29 @@ String.fromCharCode(65) // "A"
 })
 ```
 This chapter documents all of JavaScript's standard, built-in objects, including their methods and properties [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects).
+
+## OOP in JavaScript
+JavaScript is a fully object language that does not share the same logic as PHP. Here I will try to make analogies but be aware that the language does not use classes but rather a heritage based on the prototype system.
+```php
+class Student {
+
+    private $name;
+
+    public function __construct($name) {
+        $this->name = $name;
+    }
+
+    public function getName () {
+        return $this->name;
+    }
+}
+
+$bart = new Student('Bart');
+```
+To translate that into JavaScript must create a constructor.This is done using a simple function.
+```javascript
+var Student = function (name) {
+    this.name = name 
+}
+var bart = new Student('Bart')
+```
