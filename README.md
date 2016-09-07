@@ -172,3 +172,15 @@ var Student = function (name) {
 }
 var bart = new Student('Bart')
 ```
+When a function is called with the `new` operator, it is used as a constructor and generates an object using the function code. `bart` is an instance of the object `Student`.
+
+If we now want to create a method accessible by all instances of the object `Student` must assign it to the prototype property of the object property.
+```javascript
+var Student = function (name) {
+    this.name = name 
+}
+Student.prototype.getName = function () {
+    return this.name 
+}
+var bart = new Student('Bart')
+```
