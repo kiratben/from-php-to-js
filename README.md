@@ -184,3 +184,28 @@ Student.prototype.getName = function () {
 }
 var bart = new Student('Bart')
 ```
+This way of doing things brings some features:
+- There is no notion of visibility private / public / protected
+- You can define methods on the instance
+```javascript
+var bart = new Student('Bart')
+// You can change the getName method only for that instance
+bart.getName = function () {
+    return 'Lisa'   
+}
+```
+It is possible to modify the prototype after the fact, and thus give all instances of new methods
+```javascript
+String.prototype.hello = function () {
+    return this + ' hello !'    
+}
+// All strings have a new method hello()
+"1".hello()
+```
+If you want to create a "static" method simply create the method directly on the object
+```javascript
+Student.stc = function () {
+    return "stc"   
+}
+```
+A method can be defined directly on the object or the prototype (so to affect instances).
