@@ -209,3 +209,19 @@ Student.stc = function () {
 }
 ```
 A method can be defined directly on the object or the prototype (so to affect instances).
+## The this keyword
+the keyword this is not the same value as in PHP.By default this is set to the global variable (window on the browser, global on Node.js) but its value can change in a function according to how it is called.
+```javascript
+this // window or global
+var func (a) {
+    return this   
+}
+var student = {
+    func: function () {
+        return this   
+    }   
+}
+func() // window or global
+student.func() // student {}
+func.call('Hello', 'argument1') // 'Hello'
+```
