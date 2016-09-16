@@ -225,3 +225,26 @@ func() // window or global
 student.func() // student {}
 func.call('Hello', 'argument1') // 'Hello'
 ```
+
+```php
+class Student {
+
+    private $name;
+
+    public function __construct($name) {
+        $this->name = $name;
+    }
+
+    public function getName () {
+        return $this->name;
+    }
+}
+
+class Representative extends Student{
+    public function getRole () {
+        return 'Representative';
+    }
+}
+
+$bart = new Representative('Representative');
+```
