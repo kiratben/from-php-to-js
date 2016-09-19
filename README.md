@@ -225,6 +225,9 @@ func() // window or global
 student.func() // student {}
 func.call('Hello', 'argument1') // 'Hello'
 ```
+## Inheritance and the prototype chain
+
+Now that we have seen the equivalent of a class, how is the inheritance?
 
 ```php
 class Student {
